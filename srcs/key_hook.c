@@ -45,7 +45,7 @@ static void	key_func(int keycode, t_env *e)
 	del_image(e->mlx, &(e->img));
 }
 
-static void	scale_z(int keycode, t_env *e)
+/*static void	scale_z(int keycode, t_env *e)
 {
 	if (keycode == KEY_ZOOM_Z_IN)
 		calc_positions(matrice_scale(0, ZOOM_IN), e);
@@ -55,7 +55,7 @@ static void	scale_z(int keycode, t_env *e)
 	e->img = new_image(e->mlx, WIN_SIZE_X, WIN_SIZE_Y);
 	print_map_to_image(*e);
 	mlx_put_image_to_window(e->win, e->win, e->img.img, 0, 0);
-}
+}*/
 
 static void	change_color(t_env *e)
 {
@@ -85,14 +85,12 @@ int			key_hook(int keycode, t_env *e)
 		print_map_to_image(*e);
 		mlx_put_image_to_window(e->win, e->win, e->img.img, 0, 0);
 	}
-	else if (keycode == KEY_ZOOM_Z_IN || keycode == KEY_ZOOM_Z_OUT)
-	{
-		scale_z(keycode, e);
-	}
-	else
-	{
-		if (keycode != KEY_ZOOM_IN || (keycode == KEY_ZOOM_IN && lim_zoom(*e)))
-			key_func(keycode, e);
-	}
+	//else if (keycode == KEY_ZOOM_Z_IN || keycode == KEY_ZOOM_Z_OUT)
+	//{
+	//	scale_z(keycode, e);
+	//}
+	else if (keycode != KEY_ZOOM_IN || (keycode == KEY_ZOOM_IN && lim_zoom(*e)))
+		key_func(keycode, e);
+		
 	return (0);
 }

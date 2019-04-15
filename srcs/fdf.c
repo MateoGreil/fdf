@@ -33,15 +33,16 @@ static void	put_key(void)
 	ft_putendl("|    X:   Key LEFT, RIGHT |");
 	ft_putendl("|                         |");
 	ft_putendl("| Rotation:               |");
-	ft_putendl("|    X:   Keypad: 8, 2    |");
-	ft_putendl("|    Y:   Keypad: 7, 9    |");
-	ft_putendl("|    Z:   Keypad: 4, 6    |");
+	ft_putendl("|    X:   a, d            |");
+	ft_putendl("|    Y:   w, s            |");
+	ft_putendl("|    Z:   q, e            |");
 	ft_putendl("|                         |");
 	ft_putendl("| Zoom:                   |");
-	ft_putendl("|    IN:  Keypad: +       |");
-	ft_putendl("|    OUT: Keypad: -       |");
+	ft_putendl("|    IN:  i               |");
+	ft_putendl("|    OUT: o               |");
 	ft_putendl("|                         |");
-	ft_putendl("| Center: Keypad: 5       |");
+	ft_putendl("| Color:  c               |");
+	ft_putendl("| Center: space           |");
 	ft_putendl("|_________________________|");
 }
 
